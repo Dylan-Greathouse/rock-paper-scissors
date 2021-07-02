@@ -5,11 +5,14 @@ const playButton = document.getElementById('play');
 const winsSpan = document.getElementById('total-wins');
 const lossesSpan = document.getElementById('total-losses');
 const drawsSpan = document.getElementById('total-draws');
+const resetButton = document.getElementById('reset');
+const resetSpan = document.getElementById('total-resets');
 
 // initialize state
 let wins = 0;
 let losses = 0;
 let draws = 0;
+let reset = 0;
 
 // set event listeners 
 playButton.addEventListener('click', ()=>{
@@ -26,8 +29,8 @@ playButton.addEventListener('click', ()=>{
     } else {
         computerThrow = 'scissors';
     }
-    console.log(userThrow);
-    console.log(computerThrow);
+    //console.log(userThrow);
+    //console.log(computerThrow);
 
     const isWinner = didUserWin(userThrow, computerThrow);
 
@@ -42,9 +45,25 @@ playButton.addEventListener('click', ()=>{
     winsSpan.textContent = wins;
     lossesSpan.textContent = losses;
     drawsSpan.textContent = draws;
+    resetSpan.textContent = reset;
+
+});
+
+resetButton.addEventListener('click', ()=>{
+    const unselect = document.querySelector('input:checked');
+    unselect.checked = false;
+    wins = 0;
+    losses = 0;
+    draws = 0;
+    reset++;
 
 
+    winsSpan.textContent = wins;
+    lossesSpan.textContent = losses;
+    drawsSpan.textContent = draws;
+    resetSpan.textContent = reset;
 
+    // console.log(reset);
 });
   // get user input
   // use user input to update state 

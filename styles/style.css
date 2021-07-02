@@ -1,3 +1,11 @@
+html {
+    background: url(../assets/vs.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 
 body {
     /* https://coolors.co/generate and click export -> scss to get the colors to copy and paste below*/
@@ -38,11 +46,14 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     padding-top: var(--gutter);
     padding-bottom: var(--gutter);
     margin-top: var(--gutter);
     margin-bottom: var(--gutter);
     border: solid 2px var(--color1);
+    background-color: rgba(226, 215, 215, 0.9);
+    border-radius: 15%;
 }
 
 header {
@@ -72,6 +83,13 @@ h2 {
 
 .main-logo {
     animation: pulse 5s infinite ease-in-out;
+}
+
+.wins-losses{
+    background-color: rgba(226, 215, 215, 0.9);
+    align-items: center;
+    padding: 20px;
+    border-radius: 10%;
 }
 
 header img {
@@ -117,7 +135,7 @@ input[type=radio]:checked + img {
 }
 
 input[type=radio]:not(:checked) + img:hover {
-    opacity: 50%;
+    opacity: 90%;
     cursor: pointer;
 }
 
