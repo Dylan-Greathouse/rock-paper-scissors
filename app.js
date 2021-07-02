@@ -29,8 +29,8 @@ playButton.addEventListener('click', ()=>{
     } else {
         computerThrow = 'scissors';
     }
-    console.log(userThrow);
-    console.log(computerThrow);
+    //console.log(userThrow);
+    //console.log(computerThrow);
 
     const isWinner = didUserWin(userThrow, computerThrow);
 
@@ -63,7 +63,7 @@ resetButton.addEventListener('click', ()=>{
     drawsSpan.textContent = draws;
     resetSpan.textContent = reset;
 
-    console.log(reset);
+    //console.log(reset);
 });
   // get user input
   // use user input to update state 
